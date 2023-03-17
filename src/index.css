@@ -166,7 +166,7 @@ input {
 
 .total-empty{
   margin-top: 5px;
-  width: 1055px;
+  width: 900px;
   height: 220px;
   border: 5px solid #000000;
   border-radius: 10px;
@@ -179,7 +179,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-top: 20px;
 }
 
