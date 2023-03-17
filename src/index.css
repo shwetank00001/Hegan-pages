@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5F5F5;
 }
-
+.app{
+  display: flex;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -131,7 +133,6 @@ input {
 
 .contact-box{
   width: 350px;
-  height: 10009;
   background: #FFFFFF;
   border: 5px solid #0A9AE3;
   border-radius: 10px;
