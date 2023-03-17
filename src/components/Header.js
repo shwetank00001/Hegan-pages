@@ -1,13 +1,14 @@
 import React from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {FaIndustry, FaRegMoneyBillAlt, } from 'react-icons/fa'
+import { FcSettings, FcRules, FcDataConfiguration, FcBullish, FcFactory, FcFile} from "react-icons/fc";
 
 const Header = () => {
   return (
     <div className='sidebar'>
         <Sidebar>
             <Menu>
-                <SubMenu icon={<FaIndustry />} label="Product Name">
+                <SubMenu icon={<FcFactory />} label="Product Name">
                 <MenuItem > Generate </MenuItem>
                 <MenuItem> Product List</MenuItem>
                 </SubMenu>
@@ -15,28 +16,28 @@ const Header = () => {
                 <MenuItem> Purchase Entry </MenuItem>
                 <MenuItem> Purchase List </MenuItem>
                 </SubMenu>
-                <SubMenu icon={<FaIndustry />} label="Sale">
+                <SubMenu icon={<FcFile />} label="Sale">
                 <MenuItem> Sale Entry </MenuItem>
                 <MenuItem> Sale List </MenuItem>
                 </SubMenu>
-                <SubMenu icon={<FaIndustry />} label="Reports">
+                <SubMenu icon={<FcRules />} label="Reports">
                 <MenuItem> Sale Report </MenuItem>
                 <MenuItem> Goods Return Report </MenuItem>
                 <MenuItem> CN Voucher Report </MenuItem>
                 <MenuItem> Purchase Report </MenuItem>
                 </SubMenu>
-                <SubMenu icon={<FaIndustry />} label="Stock">
+                <SubMenu icon={<FcBullish />} label="Stock">
                 <MenuItem> Stock available  </MenuItem>
                 </SubMenu>
                 <SubMenu icon={<FaIndustry />} label="Bank">
                 <MenuItem> Bank Details </MenuItem>
                 <MenuItem> Line charts </MenuItem>
                 </SubMenu>
-                <SubMenu icon={<FaIndustry />} label="Accounts">
+                <SubMenu icon={<FcDataConfiguration />} label="Accounts">
                 <MenuItem> Ledger Entry </MenuItem>
                 <MenuItem> Ledger List </MenuItem>
                 </SubMenu>
-                <SubMenu icon={<FaIndustry />} label="Setting">
+                <SubMenu icon={<FcSettings />} label="Setting">
                 <MenuItem> Invoice Assign </MenuItem>
                 <MenuItem> Backup </MenuItem>
                 <MenuItem> Logout </MenuItem>
