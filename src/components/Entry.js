@@ -1,6 +1,32 @@
 import React from 'react'
 
 const Entry = () => {
+
+    const [formData, setFormData] = React.useState({
+        firmName: "",
+        region: "",
+        type: "",
+        date: "",
+        invoice:""
+    })
+
+    function handleChange(event){
+        const {name,value} = event.target
+        setFormData(function(item){
+            return({
+                ...item,
+                [name]: value
+            })
+        })
+    }
+
+    function handleSubmit(e){
+        e.preventDefault()
+        console.log(formData)
+        // localStorage.setItem("Id", [formData])
+    }
+
+    // console.log(localStorage.getItem("Id"))
   return (
     <div className='main-div'>
 
@@ -10,29 +36,34 @@ const Entry = () => {
 
         <div className='first-half'>
             <div className='top-two'>
-                <div className='input-box'>
+                <form onSubmit={handleSubmit} className='input-box'>
+                    
                     <div className='input-box-name'>
                         <label htmlFor='firmName'>Firm Name</label><br/>
-                        <input id='firmName' />
+                        <input type="name" placeholder='First Name' name="firmName" onChange={handleChange} value={formData.firmName} />
                     </div>
+
                     <div className='input-box-region'>
-                        <label htmlFor='region'>Region</label><br/>
-                        <input id='region' />
+                        <label htmlFor='region' >Region</label><br/>
+                        <input id='region' placeholder='Region..' type='name' name='region' value={formData.region} onChange={handleChange} />
                     </div>
+
                     <div className='input-box-type'>
-                        <label htmlFor='type'>Type</label><br/>
-                        <input id='type' />
+                        <label htmlFor='type'  >Type</label><br/>
+                        <input id='type' type='name' name='type' value={formData.type} onChange={handleChange} />
                     </div>
+
                     <div className='input-box-date'>
-                        <label htmlFor='date'>Date</label><br/>
-                        <input id='date' />
+                        <label htmlFor='date' >Date</label><br/>
+                        <input id='date'  type='name' name='date' value={formData.date} onChange={handleChange}/>
                     </div>
+
                     <div className='input-box-invoice'>
-                        <label htmlFor='invoiceNo'>Invoice No.</label><br/>
-                        <input id='invoiceNo' />
+                        <label htmlFor='invoiceNo'  >Invoice No.</label><br/>
+                        <input id='invoiceNo' type='name' name='invoice' value={formData.invoice} onChange={handleChange} />
                     </div>
-     
-                </div>
+                    <button></button>
+                </form>
 
 
                 <div className='quantity-box'>
