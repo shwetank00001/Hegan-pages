@@ -1,7 +1,4 @@
 import React from 'react'
-import Middlebox from './Middlebox'
-import Bottom from './Bottom'
-
 
 const Entry = () => {
 
@@ -96,7 +93,94 @@ const Entry = () => {
                 </form>
 
 
-                <Middlebox />
+                <div className='quantity-box'>
+                    <div className='quantity-box-top'>
+                        <table id="customers">
+                            <tr >
+                                <th>S.No.</th>
+                                <th>Product Name</th>
+                                <th>Unit Pack</th>
+                                <th>Quantity</th>
+                                <th>Free</th>
+                                <th>Trade Rate</th>
+                                <th>Disc%</th>
+                                <th>Amt</th>
+        
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Shwetank</td>
+                                <td>1</td>
+                                <td>24</td>
+                                <td>13</td>
+                                <td>35</td>
+                                <td>46</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Shwetank</td>
+                                <td>1</td>
+                                <td>24</td>
+                                <td>13</td>
+                                <td>35</td>
+                                <td>46</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Shwetank</td>
+                                <td>1</td>
+                                <td>24</td>
+                                <td>13</td>
+                                <td>35</td>
+                                <td>46</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Shwetank</td>
+                                <td>1</td>
+                                <td>24</td>
+                                <td>13</td>
+                                <td>35</td>
+                                <td>46</td>
+                                <td>7</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div className='quantity-box-bottom'>
+                        <div className='qty-comments'>
+                            <div>
+                                <label htmlFor='batch'>Batch No.</label><br/>
+                                <input id='batch' type='text'/>
+                            </div>
+
+
+                        </div>
+
+                        <div className='qty-details'>
+                            <table id='customers'>
+                            <tr >
+                                <th>S.No.</th>
+                                <th>Product Name</th>
+                                <th>Unit Pack</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Shwetank</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Shwetank</td>
+                                <td>1</td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             <div className='contact-box'>
                 <div className='contact-box-input'>
@@ -126,7 +210,30 @@ const Entry = () => {
             </div>
         </div>
 
-        <Bottom />
+        <div className='bottom-half'>
+            <div className='total-box'>
+                <div className='total-empty'>
+                    <p>comments</p>
+                </div>
+
+                <div className='total-values'>
+                    <div className='total-values-button'>
+                        <button>Sub. Total</button>
+                        <button>Disc. Amount</button>
+                        <button>Total Tax</button>
+                        <button>Goods Return(R)</button>
+                        <button>CN. Voucher </button>
+                        <button>Grand Total</button>
+                    </div>
+
+                </div>
+                
+            </div>
+            <div className='blank-box'>
+                
+            </div>
+
+        </div>
 
     </div>
   )
