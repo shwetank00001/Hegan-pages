@@ -89,32 +89,11 @@ input {
   background: #FFFFFF;
 }
 
-.quantity-box-top-header{
-  display: flex;
-  justify-content: space-around;
-  background: #0A9AE3;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-  font-weight: 700;
-  font-size: large;
-}
-.quantity-box-top-content{
-  display: flex;
-  justify-content: space-around;
-  background: #D9D9D9;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 5px;
-}
+
 
 .quantity-box-bottom{
   display: flex;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .qty-comments{
@@ -128,7 +107,7 @@ input {
 .qty-details{
   height: 192px;
   width: 40%;
-  justify-content: space-around;
+  padding: 10px;
 }
 
 .contact-box{
@@ -140,10 +119,8 @@ input {
 }
 
 .contact-box-input{
-  padding: 10px;
   font-weight: 700;
-  font-size: large;
-  height: 50px
+  padding: 10px;
 }
 
 .contact-box-input > input{
@@ -219,4 +196,34 @@ input {
   background-color: #fffafa;
   transition-duration: 2ms;
   color: rgb(0, 0, 0);
+}
+
+
+/* ////////////////// table */
+
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+#customers td, #customers th {
+  padding: 8px;
+
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #d9d9d9;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0A9AE3;
+  color: white;
+}
+#customers tr > td {
+  text-align: center;
+  cursor: pointer;
 }

@@ -1,4 +1,7 @@
 import React from 'react'
+import Middlebox from './Middlebox'
+import Bottom from './Bottom'
+
 
 const Entry = () => {
 
@@ -31,6 +34,7 @@ const Entry = () => {
             setDL1("1314")
             setDL2("21313")
             setFssai("This is FSSAI")
+            setInvoice("AUTO INVOICE GENERATED")
             console.log('updated')
         }
         else        if (firm === "VIKRAM"){
@@ -81,7 +85,7 @@ const Entry = () => {
 
                     <div className='input-box-date'>
                         <label htmlFor='date' >Date</label><br/>
-                        <input id='date'  type='name' value={date} onChange={(e) => setDate(e.target.value)}/>
+                        <input id='date'  type='date' value={date} onChange={(e) => setDate(e.target.value)}/>
                     </div>
 
                     <div className='input-box-invoice'>
@@ -92,64 +96,7 @@ const Entry = () => {
                 </form>
 
 
-                <div className='quantity-box'>
-                    <div className='quantity-box-top'>
-                        <div className='quantity-box-top-header'>
-                            <p>S.No.</p>
-                            <p>Product Name</p>
-                            <p>Unit Pack</p>
-                            <p>Quantity</p>
-                            <p>Free</p>
-                            <p>Trade Rate</p>
-                            <p>Disc%</p>
-                            <p>Amt</p>
-                        </div>
-                        <div className='quantity-box-top-content'>
-                            <p>1</p>
-                            <p>Shwetank </p>
-                            <p>1</p>
-                            <p>100</p>
-                            <p>56</p>
-                            <p>19</p>
-                            <p>15</p>
-                            <p>99</p>
-                        </div>
-                        <div className='quantity-box-top-content'>
-                            <p>1</p>
-                            <p>Shwetank </p>
-                            <p>1</p>
-                            <p>100</p>
-                            <p>56</p>
-                            <p>19</p>
-                            <p>15</p>
-                            <p>99</p>
-                        </div>
-                        <div className='quantity-box-top-content'>
-                            <p>1</p>
-                            <p>Shwetank </p>
-                            <p>1</p>
-                            <p>100</p>
-                            <p>56</p>
-                            <p>19</p>
-                            <p>15</p>
-                            <p>99</p>
-                        </div>
-                    </div>
-                    <div className='quantity-box-bottom'>
-                        <div className='qty-comments'>
-
-                        </div>
-
-                        <div className='qty-details'>
-                                <div className='quantity-box-top-header'>
-                                <p>Date </p>
-                                <p>Invoice No.</p>
-                                <p>Amt.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+                <Middlebox />
             </div>
             <div className='contact-box'>
                 <div className='contact-box-input'>
@@ -179,30 +126,7 @@ const Entry = () => {
             </div>
         </div>
 
-        <div className='bottom-half'>
-            <div className='total-box'>
-                <div className='total-empty'>
-                    <p>comments</p>
-                </div>
-
-                <div className='total-values'>
-                    <div className='total-values-button'>
-                        <button>Sub. Total</button>
-                        <button>Disc. Amount</button>
-                        <button>Total Tax</button>
-                        <button>Goods Return(R)</button>
-                        <button>CN. Voucher </button>
-                        <button>Grand Total</button>
-                    </div>
-
-                </div>
-                
-            </div>
-            <div className='blank-box'>
-                
-            </div>
-
-        </div>
+        <Bottom />
 
     </div>
   )
