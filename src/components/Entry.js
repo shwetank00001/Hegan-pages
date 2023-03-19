@@ -6,19 +6,14 @@ const Entry = () => {
 
     const generateTableRows = () => {
         const rows = [];
-    
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 20; i++) {
+
           rows.push(
     
             <tr key={i}>
-                                    <td>{i}</td>
+                                    <td>Date</td>
                                     <td>Shwetank</td>
                                     <td>1</td>
-                                    <td>24</td>
-                                    <td>13</td>
-                                    <td>35</td>
-                                    <td>46</td>
-                                    <td>7</td>
             </tr>
           );
         }
@@ -117,22 +112,92 @@ const Entry = () => {
 
 
                 <div className='quantity-box'>
-                    <div className='quantity-box-top'>
-                        { button && <table id="customers">
-                        <tr >
-                                <th>S.No.</th>
-                                <th>Product Name</th>
-                                <th>Unit Pack</th>
-                                <th>Quantity</th>
-                                <th>Free</th>
-                                <th>Trade Rate</th>
-                                <th>Disc%</th>
-                                <th>Amt</th>
-        
-                                </tr>
-                                <tbody>{generateTableRows()}</tbody>
-                        </table>
-}
+                    <div className='product'>
+                        <div className='quantity-box-top'>
+                                    <table id="customers">
+                                        <tr >
+                                                <th>S.No.</th>
+                                                <th>Product Name</th>
+                                                <th>Unit Pack</th>
+                                                <th>Quantity</th>
+                                                <th>Free</th>
+                                                <th>Trade Rate</th>
+                                                <th>Disc%</th>
+                                                <th>Amt</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Shwetank</td>
+                                            <td>10</td>
+                                            <td>16</td>
+                                            <td>124</td>
+                                            <td>17</td>
+                                            <td>141</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Shwetank</td>
+                                            <td>10</td>
+                                            <td>16</td>
+                                            <td>124</td>
+                                            <td>17</td>
+                                            <td>141</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Shwetank</td>
+                                            <td>10</td>
+                                            <td>16</td>
+                                            <td>124</td>
+                                            <td>17</td>
+                                            <td>141</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Shwetank</td>
+                                            <td>10</td>
+                                            <td>16</td>
+                                            <td>124</td>
+                                            <td>17</td>
+                                            <td>141</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Shwetank</td>
+                                            <td>10</td>
+                                            <td>16</td>
+                                            <td>124</td>
+                                            <td>17</td>
+                                            <td>141</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Shwetank</td>
+                                            <td>10</td>
+                                            <td>16</td>
+                                            <td>124</td>
+                                            <td>17</td>
+                                            <td>141</td>
+                                            <td>63</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Shwetank</td>
+                                            <td>10</td>
+                                            <td>16</td>
+                                            <td>124</td>
+                                            <td>17</td>
+                                            <td>141</td>
+                                            <td>63</td>
+                                        </tr>
+
+                                    </table>
+                        </div>
                     </div>
                     <div className='quantity-box-bottom'>
                         <div className='qty-comments'>
@@ -145,23 +210,19 @@ const Entry = () => {
                         </div>
 
                         <div className='qty-details'>
-                            <table id='customers'>
-                            <tr >
-                                <th>Date </th>
-                                <th>Invoice No.</th>
-                                <th>Unit Pack</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Shwetank</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Shwetank</td>
-                                <td>1</td>
-                            </tr>
-                            </table>
+                         
+
+                                { button &&<table id='customers'>
+                                    <tr >
+                                        <th>Date </th>
+                                        <th>Invoice No.</th>
+                                        <th>Unit Pack</th>
+                                    </tr>
+                                        <tbody>{generateTableRows()}</tbody>
+                                    </table>
+                                }
+
+                            
                         </div>
                     </div>
 
