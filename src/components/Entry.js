@@ -2,6 +2,33 @@ import React from 'react'
 
 const Entry = () => {
 
+    const [button, setButton] = React.useState(false)
+
+    const generateTableRows = () => {
+        const rows = [];
+    
+        for (let i = 1; i <= 10; i++) {
+          rows.push(
+    
+            <tr key={i}>
+                                    <td>{i}</td>
+                                    <td>Shwetank</td>
+                                    <td>1</td>
+                                    <td>24</td>
+                                    <td>13</td>
+                                    <td>35</td>
+                                    <td>46</td>
+                                    <td>7</td>
+            </tr>
+          );
+        }
+    
+        return rows;
+      };
+    
+
+
+
     const [firm, setFirm] = React.useState('')
     const [region, setRegion] = React.useState('')
     const [type, setType] = React.useState('')
@@ -17,6 +44,7 @@ const Entry = () => {
     const [fssai, setFssai] = React.useState('')
 
 
+    const [batch, setBatch]  = React.useState('')
 
 
     function handleSubmit(e){
@@ -32,25 +60,20 @@ const Entry = () => {
             setDL2("21313")
             setFssai("This is FSSAI")
             setInvoice("AUTO INVOICE GENERATED")
+            setBatch("Updated")
+                    setButton(function(item){
+            return(!item)
+        })
+
             console.log('updated')
         }
-        else        if (firm === "VIKRAM"){
-            setRegion("INDIA")
-            setAddress("NAVEDA")
-            setEmail("vikramBhai@gmail.com")
-            setMobile("Number")
-            setGst(363464)
-            setDL1(547575)
-            setDL2(6969698)
-            setFssai(7575757)
-            console.log('updated')
-        }
+
 
     }
 
     function handleChange(e){
         const enteredName = e.target.value;
-        setFirm(enteredName);
+        setFirm(enteredName.toUpperCase());
 
     }
 
@@ -95,8 +118,8 @@ const Entry = () => {
 
                 <div className='quantity-box'>
                     <div className='quantity-box-top'>
-                        <table id="customers">
-                            <tr >
+                        { button && <table id="customers">
+                        <tr >
                                 <th>S.No.</th>
                                 <th>Product Name</th>
                                 <th>Unit Pack</th>
@@ -106,54 +129,16 @@ const Entry = () => {
                                 <th>Disc%</th>
                                 <th>Amt</th>
         
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Shwetank</td>
-                                <td>1</td>
-                                <td>24</td>
-                                <td>13</td>
-                                <td>35</td>
-                                <td>46</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Shwetank</td>
-                                <td>1</td>
-                                <td>24</td>
-                                <td>13</td>
-                                <td>35</td>
-                                <td>46</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Shwetank</td>
-                                <td>1</td>
-                                <td>24</td>
-                                <td>13</td>
-                                <td>35</td>
-                                <td>46</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Shwetank</td>
-                                <td>1</td>
-                                <td>24</td>
-                                <td>13</td>
-                                <td>35</td>
-                                <td>46</td>
-                                <td>7</td>
-                            </tr>
+                                </tr>
+                                <tbody>{generateTableRows()}</tbody>
                         </table>
+}
                     </div>
                     <div className='quantity-box-bottom'>
                         <div className='qty-comments'>
                             <div>
                                 <label htmlFor='batch'>Batch No.</label><br/>
-                                <input id='batch' type='text'/>
+                                <input id='batch' value={batch} type='text' onChange={(e) => setBatch(e.target.value)}/>
                             </div>
 
 
@@ -162,8 +147,8 @@ const Entry = () => {
                         <div className='qty-details'>
                             <table id='customers'>
                             <tr >
-                                <th>S.No.</th>
-                                <th>Product Name</th>
+                                <th>Date </th>
+                                <th>Invoice No.</th>
                                 <th>Unit Pack</th>
                             </tr>
                             <tr>

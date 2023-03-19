@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5F5F5;
+
 }
 .app{
   display: flex;
@@ -66,10 +67,12 @@ input {
   border-radius: 4px;
   height: 25px;
   margin-top: 5px;
+
 }
 .input-box-name{
   width: 50px;
 }
+
 .input-box-name, .input-box-date, .input-box-type, .input-box-invoice, .input-box-region{
   margin-top: 10px;
   margin-left: 50px;
@@ -87,8 +90,8 @@ input {
   border: 5px solid #0A9AE3;
   border-radius: 10px;
   background: #FFFFFF;
+  overflow: auto;
 }
-
 
 
 .quantity-box-bottom{
@@ -205,10 +208,12 @@ input {
   border-collapse: collapse;
   width: 100%;
 
+
 }
 
 #customers td, #customers th {
   padding: 8px;
+  
 
 }
 
@@ -222,8 +227,10 @@ input {
   text-align: center;
   background-color: #0A9AE3;
   color: white;
+  
 }
 #customers tr > td {
   text-align: center;
   cursor: pointer;
+  
 }
