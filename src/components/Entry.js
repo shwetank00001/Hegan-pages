@@ -2,6 +2,8 @@ import React from 'react'
 
 const Entry = () => {
 
+    // ------------------------------- this is printing 10 data```````````````````````````
+
     const [button, setButton] = React.useState(false)
 
     const generateTableRows = () => {
@@ -72,6 +74,62 @@ const Entry = () => {
 
     }
 
+    // --------------------------------------------------- showing data in comments ---------------------
+
+    const [generatedData, setGeneratedData] = React.useState('');
+
+    function generateData(){
+            const newData = "Name- Product 1 , Expiry 20th, Price- 150rs"
+            setGeneratedData(newData)
+    }
+
+    // Firm table component
+    function FirmTable(props) {
+        function showData() {
+            props.generateData();
+        }
+      
+        return (
+            <div onClick={showData} className='product'>
+                <div className='quantity-box-top'>
+                        <table id="customers">
+                            <tr >
+                                    <th>S.No.</th>
+                                    <th>Product Name</th>
+                                    <th>Unit Pack</th>
+                                    <th>Quantity</th>
+                                    <th>Free</th>
+                                    <th>Trade Rate</th>
+                                    <th>Disc%</th>
+                                    <th>Amt</th>
+                            </tr>
+                            <tr onClick={showData}>
+                                <td>1</td>
+                                <td>Shwetank</td>
+                                <td>10</td>
+                                <td>16</td>
+                                <td>124</td>
+                                <td>17</td>
+                                <td>141</td>
+                                <td>63</td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        );
+      }
+    // COMMENTS TABLE
+      function CommentsTable(props) {
+        return (
+            <div className='total-empty'>
+            <p>{props.generatedData}</p>
+        </div>
+        );
+      }
+    
+
+
+
   return (
     <div className='main-div'>
 
@@ -112,93 +170,7 @@ const Entry = () => {
 
 
                 <div className='quantity-box'>
-                    <div className='product'>
-                        <div className='quantity-box-top'>
-                                    <table id="customers">
-                                        <tr >
-                                                <th>S.No.</th>
-                                                <th>Product Name</th>
-                                                <th>Unit Pack</th>
-                                                <th>Quantity</th>
-                                                <th>Free</th>
-                                                <th>Trade Rate</th>
-                                                <th>Disc%</th>
-                                                <th>Amt</th>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shwetank</td>
-                                            <td>10</td>
-                                            <td>16</td>
-                                            <td>124</td>
-                                            <td>17</td>
-                                            <td>141</td>
-                                            <td>63</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shwetank</td>
-                                            <td>10</td>
-                                            <td>16</td>
-                                            <td>124</td>
-                                            <td>17</td>
-                                            <td>141</td>
-                                            <td>63</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shwetank</td>
-                                            <td>10</td>
-                                            <td>16</td>
-                                            <td>124</td>
-                                            <td>17</td>
-                                            <td>141</td>
-                                            <td>63</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shwetank</td>
-                                            <td>10</td>
-                                            <td>16</td>
-                                            <td>124</td>
-                                            <td>17</td>
-                                            <td>141</td>
-                                            <td>63</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shwetank</td>
-                                            <td>10</td>
-                                            <td>16</td>
-                                            <td>124</td>
-                                            <td>17</td>
-                                            <td>141</td>
-                                            <td>63</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shwetank</td>
-                                            <td>10</td>
-                                            <td>16</td>
-                                            <td>124</td>
-                                            <td>17</td>
-                                            <td>141</td>
-                                            <td>63</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Shwetank</td>
-                                            <td>10</td>
-                                            <td>16</td>
-                                            <td>124</td>
-                                            <td>17</td>
-                                            <td>141</td>
-                                            <td>63</td>
-                                        </tr>
-
-                                    </table>
-                        </div>
-                    </div>
+                    <FirmTable generateData={generateData}/>
                     <div className='quantity-box-bottom'>
                         <div className='qty-comments'>
                             <div>
@@ -258,10 +230,7 @@ const Entry = () => {
 
         <div className='bottom-half'>
             <div className='total-box'>
-                <div className='total-empty'>
-                    <p>comments</p>
-                </div>
-
+                <CommentsTable generatedData={generatedData}/>
                 <div className='total-values'>
                     <div className='total-values-button'>
                         <button>Sub. Total</button>
