@@ -42,6 +42,13 @@ const Entry = () => {
 
 
     const [batch, setBatch]  = React.useState('')
+    const [Expiry, setExpiry]  = React.useState('')
+    const [mrp , setMrp ]  = React.useState('')
+    const [HSN, setHSN]  = React.useState('')
+    const [netRate, setNetRate]  = React.useState('')
+    const [CGST, setCGST]  = React.useState('')
+    // const [SGST, setSGST]  = React.useState('')
+    // const [IGST, setIGST]  = React.useState('')
 
 
     function handleSubmit(e){
@@ -58,7 +65,13 @@ const Entry = () => {
             setFssai("This is FSSAI")
             setInvoice("AUTO INVOICE GENERATED")
             setBatch("Updated")
-                    setButton(function(item){
+            setExpiry('Over')
+            setMrp(100)
+            setHSN(193414)
+            setNetRate(`${HSN*mrp}`)
+            setCGST(9213)
+
+            setButton(function(item){
             return(!item)
         })
 
@@ -104,14 +117,24 @@ const Entry = () => {
                                     <th>Amt</th>
                             </tr>
                             <tr onClick={showData}>
-                                <td>1</td>
-                                <td>Shwetank</td>
-                                <td>10</td>
-                                <td>16</td>
-                                <td>124</td>
-                                <td>17</td>
-                                <td>141</td>
-                                <td>63</td>
+                                <td><input type='text' value={"1"} /></td>
+                                <td><input type='text' value={"Shwetank"} /></td>
+                                <td><input type='text' value={"0"} /></td>
+                                <td><input type='text' value={"114"} /></td>
+                                <td><input type='text' value={"1141"} /></td>
+                                <td><input type='text' value={"1141"} /></td>
+                                <td><input type='text' value={"11"} /></td>
+                                <td><input type='text' value={"11"} /></td>
+                            </tr>
+                            <tr onClick={showData}>
+                                <td><input type='text' value={"1"} /></td>
+                                <td><input type='text' value={"Shwetank"} /></td>
+                                <td><input type='text' value={"0"} /></td>
+                                <td><input type='text' value={"114"} /></td>
+                                <td><input type='text' value={"1141"} /></td>
+                                <td><input type='text' value={"1141"} /></td>
+                                <td><input type='text' value={"11"} /></td>
+                                <td><input type='text' value={"11"} /></td>
                             </tr>
                         </table>
                 </div>
@@ -173,12 +196,33 @@ const Entry = () => {
                     <FirmTable generateData={generateData}/>
                     <div className='quantity-box-bottom'>
                         <div className='qty-comments'>
-                            <div>
-                                <label htmlFor='batch'>Batch No.</label><br/>
-                                <input id='batch' value={batch} type='text' onChange={(e) => setBatch(e.target.value)}/>
+                            <div className='box'>
+                                    <div>
+                                        <label htmlFor='batch'>Batch No.</label><br/>
+                                        <input id='batch' value={batch} type='text' onChange={(e) => setBatch(e.target.value)}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor='Expiry'>Expiry</label><br/>
+                                        <input id='Expiry' value={Expiry} type='text' onChange={(e) => setBatch(e.target.value)}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor='mrp'>MRP</label><br/>
+                                        <input id='mrp' value={mrp} type='text' onChange={(e) => setBatch(e.target.value)}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor='hsn'>HSN/SAC</label><br/>
+                                        <input id='hsn' value={HSN} type='text' onChange={(e) => setBatch(e.target.value)}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor='Net Rate'>Net Rate</label><br/>
+                                        <input id='Net Rate' value={netRate} type='text' onChange={(e) => setBatch(e.target.value)}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor='CGST'>CGST</label><br/>
+                                        <input id='CGST' value={CGST} type='text' onChange={(e) => setBatch(e.target.value)}/>
+                                    </div>
+
                             </div>
-
-
                         </div>
 
                         <div className='qty-details'>

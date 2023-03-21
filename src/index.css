@@ -110,6 +110,10 @@ input {
   margin-left: 10px;
 }
 
+.box{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
 .qty-details{
   height: 192px;
   width: 40%;
@@ -213,14 +217,20 @@ input {
   width: 100%;
   overflow: auto;
 
-
 }
 
 #customers td, #customers th {
   padding: 8px;
   
-
 }
+
+  #customers input {
+    width: 90px;
+    height: 20px;
+    background-color:#36323237 ;
+    border: 0px solid;
+    text-align: center;
+  }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
 
