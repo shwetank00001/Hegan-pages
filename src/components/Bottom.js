@@ -5,7 +5,6 @@ const Bottom = () => {
 <div className='bottom-half'>
             <div className='total-box'>
                 <div className='total-empty'>
-                    <p>comments</p>
                 </div>
 
                 <div className='total-values'>

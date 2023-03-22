@@ -146,6 +146,12 @@ const Entry = () => {
         return (
             <div className='total-empty'>
             <p>{props.generatedData}</p>
+                <div className='total-empty-buttons'>
+                    <button>Save</button>
+                    <button>Print</button>
+                    <button>View</button>
+                </div>
+
         </div>
         );
       }
