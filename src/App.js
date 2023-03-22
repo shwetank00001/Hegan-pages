@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import Entry from "./components/Entry";
+import Header from "./components/Header/Header";
+import Entry from "./components/Entry/Entry";
 import React from 'react'
 
 function App() {

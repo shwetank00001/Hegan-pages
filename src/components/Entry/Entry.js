@@ -1,4 +1,5 @@
 import React from 'react'
+import './Entry.css'
 
 const Entry = () => {
 
@@ -145,7 +146,7 @@ const Entry = () => {
       function CommentsTable(props) {
         return (
             <div className='total-empty'>
-            <p>{props.generatedData}</p>
+                <p>{props.generatedData}</p>
                 <div className='total-empty-buttons'>
                     <button>Save</button>
                     <button>Print</button>

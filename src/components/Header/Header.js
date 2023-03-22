@@ -2,6 +2,7 @@ import React from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
 import {FaIndustry, FaRegMoneyBillAlt, } from 'react-icons/fa'
 import { FcSettings, FcRules, FcDataConfiguration, FcBullish, FcFactory, FcFile} from "react-icons/fc";
+import './Header.css'
 
 const Header = () => {
 
