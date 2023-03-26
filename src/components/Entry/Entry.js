@@ -23,9 +23,15 @@ const Entry = () => {
     
         return rows;
       };
-    
+    const [unitPack,setUnitPack] = React.useState("");
+  const [Quantity,setQuantity] = React.useState("");
+  const [free ,setFree] =React.useState("");
+  const [tradeRate,setTradeRate] =React.useState("");
+  const [discount,setDiscount] =React.useState("");
+  const [amount,setAmount] =React.useState(""); 
 
 
+   
 
     const [firm, setFirm] = React.useState('')
     const [region, setRegion] = React.useState('')
@@ -94,7 +100,7 @@ const Entry = () => {
 
     function generateData(){
             const newData = "Name- Product 1 , Expiry 20th, Price- 150rs"
-            setGeneratedData(newData)
+            setGeneratedData(newData)   
     }
 
     // Firm table component
@@ -102,11 +108,22 @@ const Entry = () => {
         function showData() {
             props.generateData();
         }
+
+        function handleTableData(e){
+            setUnitPack(function(item){
+                    
+                return({
+                    ...item,
+                    [e.target.name]: e.target.defaultValue
+                })
+            })
+        }
       
         return (
             <div onClick={showData} className='product'>
                 <div className='quantity-box-top'>
                         <table id="customers">
+                        <thead>
                             <tr >
                                     <th>S.No.</th>
                                     <th>Product Name</th>
@@ -117,10 +134,11 @@ const Entry = () => {
                                     <th>Disc%</th>
                                     <th>Amt</th>
                             </tr>
+                        </thead>
                             <tr onClick={showData}>
                                 <td><input type='text' value={"1"} /></td>
                                 <td><input type='text' value={"Shwetank"} /></td>
-                                <td><input type='text' value={"0"} /></td>
+                                <td><input type='text' name='unitPack' defaultValue={unitPack} onChange={handleTableData} /></td>
                                 <td><input type='text' value={"114"} /></td>
                                 <td><input type='text' value={"1141"} /></td>
                                 <td><input type='text' value={"1141"} /></td>
@@ -296,7 +314,13 @@ const Entry = () => {
                 
             </div>
             <div className='blank-box'>
-                
+                <input />
+                <input />
+                <input />
+                <input />
+                <input />
+                <input />
+                <input />    
             </div>
 
         </div>
