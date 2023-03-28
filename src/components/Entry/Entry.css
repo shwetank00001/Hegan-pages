@@ -1,4 +1,5 @@
 body {
+  position :absolute;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -21,7 +22,6 @@ body {
   }
   
   .div-header{
-
     height: 20px;
     color: white;
     background: #0A9AE3;
@@ -30,6 +30,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2px;
+    width: 91.7rem
 
   }
   
@@ -68,7 +69,6 @@ body {
     border-radius: 4px;
     height: 25px;
     margin-top: 5px;
-  
   }
   .input-box-name{
     width: 50px;
@@ -104,17 +104,79 @@ body {
   }
   
   .qty-comments{
-    width: 60%;
-    height: 192px;
+    width:fit-content;
+    padding: 1rem;
+    height: fit-content;
     border: 5px solid #0A9AE3;
     border-radius: 10px;
     margin-left: 10px;
   }
-  
-  .box{
-    display: grid;
-    grid-template-columns: 50% 50%;
+   .box > div > div > label{
+     font-size: larger;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+
+   .box > div > div  > div > div > label{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
   }
+
+  .label-for-second{
+    align-items: center;
+     display: flex;
+     justify-content: left;
+     gap: 1rem;
+  }
+
+  .label-for-second > div {
+    display: grid;
+  }
+  .label-for-second > div >input{
+    height: 30px;
+    width: 60px;
+  }
+
+  .label-for-four{
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+  }
+.label-for-four > div >input{
+    height: 30px;
+    width: 50px;
+  }
+
+.label-for-four >div{
+  display: grid;
+}
+.TAX{
+  margin-top: 1.4rem;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#BatchNo{
+  height: 30px;
+  width: 90px;
+}
+
+#Expiry{
+    height: 30px;
+    width: 90px;
+  }
+#MRP{
+  height: 30px;
+  width: 80px;
+}
+#HSN{
+  height: 30px;
+  width: 90px;
+}
+
+
+
+
   .qty-details{
     height: 192px;
     width: 40%;
@@ -122,21 +184,29 @@ body {
     overflow: auto;
   }
   
+  .qty-details-header > th{
+    position: sticky;
+    top: 0;
+  }
+  
   .contact-box{
-    width: 350px;
+    width: 300px;
     background: #FFFFFF;
     border: 5px solid #0A9AE3;
     border-radius: 10px;
-    
   }
   
   .contact-box-input{
     font-weight: 700;
     padding: 10px;
   }
+  .contact-box-input > label{
+    margin-left: 40px;
+  }
   
   .contact-box-input > input{
-    width: 250px;
+    width: 200px;
+    margin-left: 40px;
   }
   
   .bottom-half{
@@ -154,9 +224,9 @@ body {
   }
   
   .total-empty{
-    margin-top: 5px;
+    margin-top: 12px;
     width: 900px;
-    height: 220px;
+    height: 240px;
     border: 5px solid #000000;
     border-radius: 10px;
     margin-left: 10px;
@@ -183,13 +253,15 @@ body {
     margin-top: 0px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-right: 5px;
+    gap: 12.6px;
+    margin-right: 6px;
+    margin-left: 6px;
     margin-top: 20px;
   }
   
   .total-values-button > button {
     cursor: pointer;
+    margin-top: .2rem;
     background-color: #0A9AE3;
     color: white;
     font-size: large;
@@ -199,23 +271,25 @@ body {
   }
   
   .blank-box{
-    width: 350px;
+    width: 300px;
     height: 263px;
     left: 1146px;
     top: 840px;
+    display:grid;
+    justify-content:center;
     background: #FFFFFF;
     border: 5px solid #0A9AE3;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: .6rem;
+    padding-bottom: 1rem;
   }
-
-  .blank-box >input {
-    margin: 8px;
-    border: 2px solid black;
-    background-color: #D9D9D9    ;
+  .blank-box > input{
+    margin-left: 5px;
+    width: 200px;
+    height:20px;
+    background: #D9D9D9;
+    border: 2px solid #000000;
+    border-radius: 4px;
   }
 
    /* ////////////////// table */
@@ -257,4 +331,155 @@ body {
     cursor: pointer;
     
   }
-  
+
+  .table-customer-header > th{
+    position: sticky;
+    z-index: 5;
+    top: 0;
+  }
+  .qty-detail-header > th{
+    position: sticky;
+
+    top: 0;
+  }
+  .table-customer-value > td {
+    position: sticky;
+    z-index: 1;
+    top: 10;
+  }
+
+  .checkbox-td {
+    display: flex;  
+    margin-left: -2rem;
+  }
+
+
+.checkbox-2{
+  margin-left: -3rem;
+}
+
+.checkbox-3{
+  margin-left: -3rem;
+  margin-right: -2rem;
+}
+
+ 
+   .submit-firm{
+    background-color:#0A9AE3;
+    margin-left: 8rem;
+    margin-top: 1rem;
+    height: 30px;
+    width: 150px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    color: white;
+  } 
+
+  .ProductName{
+    margin-top: 4px;
+    height: 23px;
+    width: 200px;
+    background-color: rgb(206, 202, 206);
+    font: white;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+  .FirmName{
+    margin-top: .4rem;
+    height: 28px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    font: white;
+    cursor: pointer;
+    border-radius: 7px;
+  }
+  .Date-Invoice-Amt-Main{
+     border: #ff1515;
+     height: 10rem;
+     width: 43rem;
+     margin-left: 1rem;
+     display:flex;
+     align-items:grid;
+     justify-content: center;
+  }
+
+  .Date-Invoice-Amt{
+    position: absolute;
+    width: 333px;
+    height: 30px;
+    background: #0A9AE3;
+    border-radius: 10px;
+  }
+  .Date-Invoice-Amt-Main > div{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 4rem;
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: larger;
+     font-weight: bold;
+    }
+.input-div{
+  position: absolute;
+  width: 333px;
+  height: 30px;
+  margin-top: 3rem;
+  background:  #D9D9D9;
+  border-radius: 10px;
+}
+
+.input-div > input {
+   background-color:  #D9D9D9;
+   width: 60px;
+   border: none;
+}
+
+/* /////////////////////////--------------------------------------- */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  border: 2px solid black;
+}
+
+.modal .content {
+  position: relative;
+  padding: 10px;
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: rgba(112, 128, 175, 0.2) 0px 16px 24px 0px;
+  transform: scale(0);
+  transition: transform 300ms cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.modal .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #7080af;
+  clip-path: polygon(0 10%, 10% 0, 50% 40%, 89% 0, 100% 10%, 60% 50%, 100% 90%, 90% 100%, 50% 60%, 10% 100%, 0 89%, 40% 50%);
+}
+
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal.open .content {
+  transform: scale(1);
+}
