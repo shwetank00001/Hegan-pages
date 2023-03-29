@@ -857,7 +857,7 @@ const Entry = () => {
               <button>Grand Total</button>
             </div>
           </div>
-        </div>
+        </div>z``
         <div className="blank-box">
           <input
             value={subtotal}
